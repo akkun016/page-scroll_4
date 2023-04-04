@@ -1,0 +1,205 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+}
+
+main {
+  background-color: rgba(153, 153, 153, 0.6);
+}
+main header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 40px;
+  position: fixed;
+  top: 0;
+}
+main header .header-sns {
+  -ms-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  font-size: 0.75rem;
+}
+main header .header-sns a {
+  margin-top: 10px;
+  padding-left: 5px;
+  border-left: solid 1px #111;
+}
+main header .header-sns a:first-child {
+  margin-top: 0;
+}
+main header .header-nav {
+  display: flex;
+}
+main header .header-nav__link {
+  font-size: 0.75rem;
+}
+main header .header-nav__link a {
+  margin-left: 10px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #111;
+}
+main header .header-nav__link a:first-child {
+  margin-left: 0;
+}
+main header .header-nav__lists {
+  -ms-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  margin-left: 20px;
+}
+main header .header-nav__lists li {
+  margin-left: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+main header .header-nav__lists li a {
+  position: relative;
+  display: inline-block;
+  transition: 0.5s;
+}
+main header .header-nav__lists li a::before {
+  position: absolute;
+  top: 0;
+  content: "・";
+  display: inline-block;
+  color: rgb(255, 0, 255);
+  font-size: 17px;
+  transform: translateX(2px) scale(0);
+  transition: 0.5s;
+}
+main header .header-nav__lists li a.active {
+  color: rgb(255, 0, 255);
+  transform: translateY(17px);
+}
+main header .header-nav__lists li a.active::before {
+  top: -17px;
+  transform: translateX(2px) scale(1.1);
+}
+main .section-block {
+  height: 1500px;
+  width: 100%;
+  padding-top: 100px;
+  border-top: solid 1px #111;
+}
+main .section-block:nth-child(2n) {
+  background-color: #fff;
+}
+main .section-block .section-title {
+  padding-left: 20%;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  color: #111;
+  -ms-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+footer {
+  height: 70vh;
+  width: 100%;
+  background-color: #888;
+}

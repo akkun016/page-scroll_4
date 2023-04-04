@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import 'reset';
+
+a {
+  color: #111;
+  text-decoration: none;
+}
+
+main {
+  background-color: #9999;
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 40px;
+    position: fixed;
+    top: 0;
+    .header-sns {
+      -ms-writing-mode: vertical-rl;
+      writing-mode: vertical-rl;
+      font-size: 0.75rem;
+      a {
+        margin-top: 10px;
+        padding-left: 5px;
+        border-left: solid 1px #111;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+    .header-nav {
+      display: flex;
+      &__link {
+        font-size: 0.75rem;
+        a {
+          margin-left: 10px;
+          padding-bottom: 5px;
+          border-bottom: solid 1px #111;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+      &__lists {
+        -ms-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        margin-left: 20px;
+        li {
+          margin-left: 20px;
+          font-size: 0.8rem;
+          font-weight: bold;
+          a {
+            position: relative;
+            display: inline-block;
+            transition: 0.5s;
+            &::before {
+              position: absolute;
+              top: 0;
+              content: "・";
+              display: inline-block;
+              color: rgb(255, 0, 255);
+              font-size: 17px;
+              transform: translateX(2px)scale(0);
+              transition: 0.5s;
+            }
+            &.active {
+              color: rgb(255, 0, 255);
+              transform: translateY(17px);
+              &::before {
+                top: -17px;
+                transform: translateX(2px)scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .section-block {
+    height: 1500px;
+    width: 100%;
+    padding-top: 100px;
+    border-top: solid 1px #111;
+    &:nth-child(2n) {
+      background-color: #fff;
+    }
+    .section-title {
+      padding-left: 20%;
+      font-size: 1.4rem;
+      letter-spacing: 0.2rem;
+      color: #111;
+      -ms-writing-mode: vertical-rl;
+      writing-mode: vertical-rl;
+    }
+  }
+}
+
+footer {
+  height: 70vh;
+  width: 100%;
+  background-color: #888;
+}
